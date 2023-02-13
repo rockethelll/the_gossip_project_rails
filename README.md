@@ -1,5 +1,5 @@
 
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/rockethelll/the_gossip_project_rails
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/rockethelll/the_gossip_project_rails)
 
 # The Gossip Project
 
