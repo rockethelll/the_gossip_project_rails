@@ -8,7 +8,4 @@ class HomeController < ApplicationController
     @user = User.all
   end
 
-  def show
-    @show = Gossip.find(params[:id])
-  end
 end

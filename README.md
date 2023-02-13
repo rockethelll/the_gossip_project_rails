@@ -1,24 +1,21 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/rockethelll/the_gossip_project_rails
 
-Things you may want to cover:
+# The Gossip Project
 
-* Ruby version
+Un site de potins, plus croustillants les uns que les autres.
 
-* System dependencies
+## Fonctionnement
 
-* Configuration
+* Pense à démarrer le service postgresql si tu utilises WSL &rarr; `sudo service postgresql start`
+* Lance `bundle install`
+* Puis `rails db:create`
+* Et enfin `rails db:migrate` pour mettre tes Bases de données UP
 
-* Database creation
+Un fichier contenant des générateurs de contenu aléatoire est à disposition pour effectuer des tests.
+Pour t'en servir et remplir tes bases, lance cette dernière commande `rails db:seed`.
 
-* Database initialization
+## Accès au site
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Pour accéder au site, lance la commande `rails s` qui va lancer un serveur.
+Va sur [le site](http://localhost:3000) via ce lien une fois que tu as exécuter toutes ces commandes.

@@ -1,6 +1,0 @@
-<h1 class="text-center">Vous voici sur la page du potin n°<%= @show.id %></h1>
-<h2>Titre : <%= @show.title%></h2>
-<p>Ce que raconte ce Gossip : </p>
-<%= @show.content%>
-<% date = @show.created_at %>
-<%= date.strftime(" Crée le : %d, %m, %Y à %H:%M") %>
