@@ -1,0 +1,21 @@
+<h1 class="text-center">Bienvenue <%= @first_name %></h1>
+
+
+<h2 class="text-center">Voici la liste des potins :</h2>
+<div class="d-flex justify-content-between text-center">
+  <div class="row">
+    <% @gossip.each_slice(3) do |gossips| %>
+      <% gossips.each do |gossip| %>
+        <div class="d-flex justify-content-center col-md-4 col-sm-6 mb-3">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Titre: <%= gossip.title %></h5>
+              <p class="card-text">Auteur: <%= @user.find(gossip.user_id).first_name %></p>
+              <%= link_to 'Voir le potin', show_path(gossip), class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
