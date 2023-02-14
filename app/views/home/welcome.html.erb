@@ -1,5 +1,5 @@
 <h1 class="text-center mt-4">Bienvenue <%= @first_name %></h1>
- <%= link_to 'Créer un nouveau potin', new_gossip_path, class: "btn btn-success ms-5" %>
+<%= link_to 'Créer un nouveau potin', new_gossip_path, class: "btn btn-success ms-5" %>
 
 <h2 class="text-center my-5">Voici la liste des potins :</h2>
 <div class="d-flex justify-content-between text-center">
@@ -12,7 +12,6 @@
               <h5 class="card-title">Titre: <%= gossip.title %></h5>
               <p class="card-text">Auteur: <%= @user.find(gossip.user_id).first_name %></p>
               <%= link_to 'Voir le potin', show_path(gossip), class: "btn btn-primary" %>
-             
             </div>
           </div>
         </div>
@@ -20,4 +19,3 @@
     <% end %>
   </div>
 </div>
-
