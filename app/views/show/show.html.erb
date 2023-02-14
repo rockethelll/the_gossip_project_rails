@@ -18,7 +18,9 @@
 <div class="container mt-3">
   <div class="row justify-content-center">
     <div class="col-md-6 text-center">
+      <%= link_to "Retour aux gossips", :back, class: "btn btn-secondary" %>
       <%= link_to "Profil de l'auteur", author_path(@user.find(@show.user_id)), class: "btn btn-primary" %>
     </div>
   </div>
 </div>
+

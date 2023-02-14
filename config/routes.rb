@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'author/author'
+  resources :gossip, only: [:new, :create]
+  # get 'author/author'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root 'home#index'
   get '/team' => 'team#team'

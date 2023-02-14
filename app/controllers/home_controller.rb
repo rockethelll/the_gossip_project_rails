@@ -7,5 +7,4 @@ class HomeController < ApplicationController
     @gossip = Gossip.all
     @user = User.all
   end
-
 end

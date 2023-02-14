@@ -1,0 +1,18 @@
+
+<form>
+  <%= form_tag url_for(action: 'create'), method: "post" do %>
+  <div class="container">
+    <div class="row mt-5 mb-3">
+      <%= label_tag 'Quel est le titre du potin ?', nil, class: 'form-label' %>
+      <%= text_field_tag 'title' %>
+    </div>
+    <div class="row mb-3">
+      <%= label_tag 'Balance ton potin' %>
+      <%= text_area_tag 'content', nil,rows: 5, cols: 40, class: 'form_control' %>
+    </div>
+    <div class="row mb-3">
+      <%= submit_tag "Publier le potin !", class: 'btn btn-primary' %>
+    </div>
+  </div>
+  <% end %>
+</form>
