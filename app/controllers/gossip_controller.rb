@@ -13,4 +13,10 @@ class GossipController < ApplicationController
       render :new
     end
   end
+
+  def show
+    @show = Gossip.find(params[:id])
+    @user = User.all
+    @city = City.all
+  end
 end
