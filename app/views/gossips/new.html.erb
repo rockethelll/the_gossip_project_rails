@@ -1,0 +1,37 @@
+<div class="container">
+  <h1 class="text-center mt-5">Créer un potin</h1>
+
+  <%= form_for @gossip do |f| %>
+    <div class="row my-3">
+      <div class="mb-2">
+        <%= f.label :title %>
+      </div>
+      <div class="">
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="row my-3">
+      <div class="mb-2">
+        <%= f.label :content %>
+      </div>
+      <div class="">
+        <%= f.text_area :content, class: 'form-control', rows: 5 %>
+      </div>
+    </div>
+
+    <div class="form-group text-center">
+      <%= link_to "Retour aux gossips", :back, class: "btn btn-sm btn-secondary mr-3" %>
+      <%= f.submit "Ajouter le gossip", class: "btn btn-sm btn-primary" %>
+    </div>
+  <% end %>
+</div>
+
+<% if @gossip.errors.any? %>
+  <p>Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</p>
+  <ul>
+    <% @gossip.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>

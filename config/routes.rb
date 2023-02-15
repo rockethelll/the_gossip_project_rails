@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  # get 'gossips/new'
+  # get 'gossips/create'
+  # get 'gossips/show'
   root 'home#index'
-  resources :gossip, only: [:new, :create, :show]
+  resources :gossips
   resources :user, only: [:show]
   resources :author, only: [:show]
   resources :team, only: [:index]

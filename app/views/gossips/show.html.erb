@@ -1,0 +1,27 @@
+<h1 class="text-center">Vous voici sur la page du potin n°<%= @gossip.id %></h1>
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="mb-3">Titre : <%= @gossip.title%></h2>
+      <p class="mb-3">Ce que raconte ce Gossip :</p>
+      <div class="card p-3">
+        <%= @gossip.content%>
+      </div>
+      <p class="my-3">Ville de l'auteur : <%= @user.find(@gossip.user_id).city.name %></p>
+      <br>
+      <% date = @gossip.created_at %>
+      <p class="text-muted mt-3">Créé le : <%= date.strftime("%d-%m-%Y à %H:%M") %> par <%= @user.find(@gossip.user_id).first_name %> <%= @user.find(@gossip.user_id).last_name %></p>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-center">
+      <%= link_to "Retour aux gossips", :back, class: "btn btn-secondary" %>
+      <%= link_to "Profil de l'auteur", author_path(@user.find(@gossip.user_id)), class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+
