@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
   resources :gossip, only: [:new, :create, :show]
+  resources :user, only: [:show]
   get 'author/author'
   get '/team' => 'team#team'
   get '/contact' => 'contact#contact'
