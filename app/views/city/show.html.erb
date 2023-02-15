@@ -1,0 +1,29 @@
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center my-5">
+        Bienvenue sur la page de la ville de <strong><%= @city.name %></strong>
+      </h1>
+    </div>
+  </div>
+  <h2 class="text-center my-5">Voici la liste des potins :</h2>
+<div class="d-flex justify-content-between text-center">
+  <div class="row">
+    <% potin_index = 0 %>
+    <% @gossip.each_slice(3) do |gossips| %>
+      <% gossips.each_with_index do |gossip| %>
+        <% potin_index += 1 %>
+        <div class="d-flex justify-content-center col-md-4 col-sm-6 my-4">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <p class="card-text">Potin n°: <%= potin_index %></p>
+              <h5 class="card-title">Titre: <%= gossip.title %></h5>
+              <p class="card-text">Auteur: <%= gossip.user.first_name %></p>
+              <%= link_to 'Voir le potin', gossip_path(gossip), class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

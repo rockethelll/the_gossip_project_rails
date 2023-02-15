@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :author, only: [:show]
   resources :team, only: [:index]
   resources :contact, only: [:index]
+  resources :city, only: [:show]
 
   get '/welcome/:first_name' => 'home#welcome', as: 'welcome'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
