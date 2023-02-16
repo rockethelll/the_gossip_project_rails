@@ -1,9 +1,10 @@
-class GossipsController < ApplicationController
+class GossipController < ApplicationController
   def new
     @gossip = Gossip.new
   end
+
   def index
-    
+    @gossips = Gossip.all.sort_by(&:created_at)
   end
 
   def create
@@ -36,12 +37,12 @@ class GossipsController < ApplicationController
   def destroy
     @gossip = Gossip.find(params[:id])
     @gossip.destroy
-    redirect_to gossips_path
+    redirect_to '/welcome/test'
   end
 
   private
 
   def gossip_params
-    params.require(:gossip).permit(:title, :content, :id)
+    params.require(:gossip).permit(:title, :content)
   end
 end
