@@ -26,6 +26,13 @@
         <a class="nav-link active" aria-current="page" href="<%= root_path %>">Accueil</a>
         <a class="nav-link" href="<%= team_index_path %>">La team</a>
         <a class="nav-link" href="<%= contact_index_path %>">Contact</a>
+        <a class="nav-link" href="<%= new_user_path %>">S'inscrire</a>
+        <a class="nav-link" href="<%= new_session_path %>">Se connecter</a>
+        <%
+=begin%>
+ <a class="nav-link" href="<%= session_path(@user.id) %>">Se déonnecter</a> 
+<%
+=end%>
       </div>
     </div>
   </div>

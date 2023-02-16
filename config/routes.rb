@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
-  # get 'gossips/new'
-  # get 'gossips/create'
-  # get 'gossips/show'
   root 'home#index'
   resources :gossip
-  resources :user, only: [:show]
+  resources :users, only: [:show, :new, :create]
   resources :author, only: [:show]
   resources :team, only: [:index]
   resources :contact, only: [:index]
   resources :city, only: [:show]
+  resources :sessions, only: [:new, :create, :destroy]
 
   get '/welcome/:first_name' => 'home#welcome', as: 'welcome'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
