@@ -28,9 +28,13 @@
         <a class="nav-link" href="<%= contact_index_path %>">Contact</a>
         <a class="nav-link" href="<%= new_user_path %>">S'inscrire</a>
         <a class="nav-link me-5" href="<%= new_session_path %>">Se connecter</a>
-        <% if current_user %>
-  <%= button_to "Déconnexion", session_path(@user), method: :delete, class: 'btn btn-danger ms-5' %>
-<% end %>
+        <%
+=begin%>
+ <% if current_user %>
+          <%= button_to "Déconnexion", session_path(@user), method: :delete, class: 'btn btn-danger ms-5' %>
+        <% end %> 
+<%
+=end%>
       </div>
     </div>
   </div>
